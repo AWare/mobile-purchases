@@ -2,7 +2,7 @@
 _IOS receipt validation and purchase persistence_
 
 ## Patterns
-* static state enables reuse of resources between invocations
+* Static state enables reuse of resources between invocations
 * A Controller bridges HTTP abstraction (LambdaRequest/LambdaResponse) from functionality
 * A Route is high level routing logic (like message routing)
  
