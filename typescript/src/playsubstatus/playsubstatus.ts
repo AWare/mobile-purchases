@@ -75,7 +75,7 @@ export async function handler(request: HTTPRequest): Promise<HTTPResponse> {
                     const subscriptionHasLapsed: boolean = now > subscriptionExpiryDate;
                     const responseBody: SubscriptionStatusResponse = {"subscriptionHasLapsed": subscriptionHasLapsed, "subscriptionExpiryDate": subscriptionExpiryDate};
                     console.log(`Successfully retrieved subscription details from Play Developer API. Response body will be: ${JSON.stringify(responseBody)}`);
-                    return new HTTPResponse(200, new HTTPResponseHeaders(), JSON.stringify(responseBody))
+                    return HTTPResponses.OK
                 } else {
                     console.log(`Failed to establish expiry time of subscription`);
                     return HTTPResponses.NOT_FOUND
